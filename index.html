@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Roll a D2</title>
+</head>
+
+<body>
+    <!-- Quit looking under the hood, you jerk -->
+    <div id="content">
+        <button onclick="rollReporter()">Roll that D2</button>
+        <button onclick="clearResult()">Clear</button>
+        <p id="outcome"></p>
+
+        <script>
+            function rollReporter() {
+                let math;
+                function roll() {
+                    if (Math.random() <= 0.5) {
+                        math = 1;
+                    } else {
+                        math = 2;
+                    };
+                    return math;
+                    console.log(math);
+                }
+                let rollResult = roll();
+
+                document.getElementById("outcome").innerHTML = rollResult;
+            };
+        </script>
+
+        <script>
+            function clearResult() {
+                document.getElementById("outcome").innerHTML = "";
+            }
+        </script>
+    </div>
+
+    <div id="no">
+        <button onclick="window.location.href='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.britannica.com%2Feb-media%2F40%2F188540-004-9F52B89C.jpg&f=1&nofb=1';">What does this do?</button>
+    </div>
+</body>
+</html>
